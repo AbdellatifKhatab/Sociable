@@ -71,33 +71,45 @@
       line-height: 1.5;
       text-shadow: 0 2px 12px rgba(0,0,0,.45);
     }
-    .social {
-      display: flex;
-      gap: 14px;
-      margin-top: 30px;
-    }
-    .social a {
-      width: 48px;
-      height: 48px;
-      border: 1px solid rgba(255,255,255,.7);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      text-decoration: none;
-      background: rgba(0,0,0,.18);
-      transition: transform .2s ease, background .2s ease;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .social a:hover {
-      transform: translateY(-3px);
-      background: rgba(255,255,255,.18);
-    }
-    @media (max-width: 600px) {
-      .overlay { background: rgba(0,0,0,.38); }
-      .logo { margin-bottom: 22px; }
-      .social { margin-top: 24px; }
+    <style>
+.social {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.social a {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.12);
+  transition: all 0.25s ease;
+}
+
+.social a:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #fff;
+}
+
+.social svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+@media (max-width: 600px) {
+  .social {
+    margin-top: 24px;
+  }
+}
+</style>
     }
   </style>
 </head>
@@ -117,9 +129,36 @@
     <p>Something amazing is coming soon.</p>
 
     <div class="social" aria-label="Social media">
-      <a href="https://www.instagram.com/sociable.sa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
-      <a href="https://www.tiktok.com/@sociable.sa" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TT</a>
-    </div>
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/sociable.sa/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram">
+
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9z"/>
+      <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+      <circle cx="17.5" cy="6.5" r="1.25"/>
+    </svg>
+
+  </a>
+
+  <!-- TikTok -->
+  <a
+    href="https://www.tiktok.com/@sociable.sa"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok">
+
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M16.5 2h3c.2 2.2 1.3 3.8 3.5 4.7v3.1c-1.3-.1-2.6-.5-3.7-1.2v6.7c0 5-3.1 7.7-7.3 7.7-3.8 0-6.5-2.7-6.5-6.3 0-3.8 3-6.6 6.9-6.6.4 0 .8 0 1.2.1v3.2c-.4-.1-.8-.2-1.2-.2-1.8 0-3.5 1.2-3.5 3.4 0 1.8 1.3 3.3 3.2 3.3 2 0 3.4-1.3 3.4-3.7V2z"/>
+    </svg>
+
+  </a>
+
+</div>
   </main>
 </body>
 </html>
